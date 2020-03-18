@@ -1,0 +1,14 @@
+marc_map('100a','Forfattare');
+marc_map('245ab','Titel');
+marc_map('942c','Item type');
+
+do marc_each()
+    if marc_match("952a","TORE")
+        marc_map("952c",PlaceringTba.$append)
+    end
+end
+join_field(PlaceringTba,' / ');
+
+remove_field('record');
+remove_field('_id');
+
