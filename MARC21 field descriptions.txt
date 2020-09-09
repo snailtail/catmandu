@@ -1,0 +1,8 @@
+These are the fields we were interested in:
+
+100 a (author)
+245 a (title)
+245 b (title)
+942 c (item type)
+952 a (permanent location)
+952 c (shelving location)
