@@ -1,8 +1,0 @@
-100 a (författare)
-245 a (titel)
-245 b (titel)
-942 c (item type)
-952 a (permanent location)
-952 c (shelving location)
-
-952 b (current location) (nja inte denna kanske)
