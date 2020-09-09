@@ -13,10 +13,10 @@ My Catmandu files for converting lists for the library to Excel format.
 
 Installation of necessary files:
 
-Run  _setup.sh if you're on Debian/Ubuntu, it should work - if not, try the three commands listed below. If that doesn't work, I'm sorry - I probably can't help you, but maybe the Internet can?
+- Clone this repository, to get started.
+- Run  _setup.sh if you're on Debian/Ubuntu, it should work - if not, try the three commands listed below. If that doesn't work, I'm sorry - I probably can't help you, but maybe the Internet can?
 
 You should be aware that the installation process probably will take a good long while.
-
 My machines arent lightning fast, but it took some 30 minutes to download and prepare/install everything. However, since you just fire away the installation with three lines (or via _setup.sh) you can go about some other business while the installation runs it's course.
 
 ***Tested on the following platforms:***
