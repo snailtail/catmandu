@@ -1,29 +1,30 @@
-﻿# För att få ut JSON-strängen till shell kan du köra:
+# These are mostly notes for my own benefit
+# We are assuming that your MARC21 file is called shelf.iso2709 and placed in the folder where you are executing the commands from, as should the fixes.txt be.
+
+# To make the XLS file: 
+catmandu convert MARC --fix fixes.txt to XLS --file output.xls < shelf.iso2709
+
+
+*********************
+# To convert the MARC file to a JSON string:
 catmandu convert MARC --fix fixes.txt < shelf.iso2709
 
-Ifall författare inte finns på första posten blir den kolumnen inte med i listan.
-Kopiera JSON-datat, Lägg in "Forfattare":"???", i första värdet isf, och kör powershell:
-$banan = ConvertFrom-Json -InputObject $txt
-$banan | Out-GridView
+# In case there is no Author in the first item of the MARC21 file (I need to investigate if fixes.txt can handle this):
+# Copy the JSON-data (see above for that), Add "Forfattare":"???", in the first item, and then use PowerShell:
+$txt = '<replace this with the entire JSON-string>'
+$corrected = ConvertFrom-Json -InputObject $txt
+$corrected | Out-GridView
+# Note: when creating the $txt variable, you must remove the < and > and everything in between, and replace that with the JSON string instead.
 
-Där $txt innehåller JSON-strängen inkapslad inom ''
-
-Eller så kör du:
+# Or you could do:
 catmandu convert MARC --fix fixes.txt to JSON --file out.json --pretty 1 < shelf.iso2709
-och laddar ner json-filen och läser in den som ett json-objekt i Powershell. 
-Glöm inte att fixa till författare först bara.
+# then download the JSON file, correct the missing author, and then import the JSON file as a JSON object in Powershell. 
+# export it to a grid view or what ever suits your needs.
 
 *******************
 
-#För att göra JSON filen:
-catmandu convert MARC --fix fixes.txt to JSON --file out.json --pretty 1 < shelf.iso2709
-
-#För att göra XLS filen:
-catmandu convert MARC --fix fixes.txt to XLS --file listan.xls < shelf.iso2709
-
-
-#Om det är strul med otillåtna tecken så är listan/filen inte i rätt format fullt ut. Man kan testa att konvertera om den så rensas alla otillåtna tecken bort.
-#Följande kommando tar shelf.iso2709 och konverterar om och sparar output i moholm.iso2709
+# Mental note to myself/Magnus in case of illegal characters in the iso2709 file:
+# Följande kommando tar shelf.iso2709 och konverterar om och sparar output i moholm.iso2709
 iconv -f utf-8 -t utf-8 -c shelf.iso2709 >> moholm.iso2709
 
 
