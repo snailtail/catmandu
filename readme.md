@@ -7,7 +7,7 @@ https://librecat.org/Catmandu/
 
 I use it to convert lists for the local library, in our Case we convert from the MARC format of the files exported from the library system (Koha) to an Excel file.
 
-My Catmandu files for converting lists for the library to Excel format.
+
 
 **Preparations**
 
