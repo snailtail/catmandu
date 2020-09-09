@@ -11,13 +11,13 @@ My Catmandu files for converting lists for the library to Excel format.
 
 **Preparations**
 
-Installation of necessary files:
-
-- Clone this repository, to get started.
-- Run  _setup.sh if you're on Debian/Ubuntu, it should work - if not, try the three commands listed below. If that doesn't work, I'm sorry - I probably can't help you, but maybe the Internet can?
+Installation of necessary files: See https://librecat.org/Catmandu/#installation
+Or if you're on a decently recent Ubuntu this should work:
+- Clone this repository.
+- Run  _setup.sh
 
 You should be aware that the installation process probably will take a good long while.
-My machines arent lightning fast, but it took some 30 minutes to download and prepare/install everything. However, since you just fire away the installation with three lines (or via _setup.sh) you can go about some other business while the installation runs it's course.
+My machines arent lightning fast, but it took some 45 minutes to download, build and install everything. However,the installation does it's business without a need for your help, so you can go about some other business while the installation runs it's course.
 
 ***Tested on the following platforms:***
 
