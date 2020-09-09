@@ -49,8 +49,8 @@ Your needs will probably differ from mine, so this is just here as an example so
 
 Anyhow, this is what I try to do with my fixes:
 1. Map in the field 100a (author)
-2. Map in the field 245a and b together - (this gives the title)
-3. Map in the field 942c (we use this to check what type of item, a regular book or an audio book etc.)
-4. For each item, check if the field 952a matches the code for the local library (TORE), and if it does: Use the data from field 952c (shows in what section the item is placed) and append it to a new field 'PlaceringTba).
+2. Map in the field 245a and b together - (title)
+3. Map in the field 942c (item type)
+4. For each item, check if the field 952a (permanent location) matches the code for the local library (TORE), and if it does: Use the data from field 952c (shelving location) and append it to a new field 'PlaceringTba).
 5. Append the new Field 'PlaceringTba' to the data
 6. Remove the fields 'record' and '_id' from the data.
